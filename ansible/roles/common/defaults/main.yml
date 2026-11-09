@@ -1,0 +1,14 @@
+---
+common_packages:
+  - curl
+  - ca-certificates
+  - git
+  - jq
+  - htop
+  - vim
+  - ufw
+  - fail2ban
+  - unattended-upgrades
+
+common_timezone: America/Caracas
+common_ssh_port: 22

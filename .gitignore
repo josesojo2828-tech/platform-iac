@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+*.tfvars
+!*.tfvars.example
+
+# Ansible
+ansible/inventory/hosts.yml
+*.retry
+.venv/
+
+# Local
+.env

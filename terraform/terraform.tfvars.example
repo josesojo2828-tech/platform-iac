@@ -1,0 +1,57 @@
+# Copiar a terraform.tfvars y completar. NUNCA commitear este archivo.
+#
+# El token se genera en Proxmox: Datacenter -> Permissions -> API Tokens.
+# Formato: "user@realm!tokenid=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+proxmox_endpoint   = "https://pve.example.com:8006/"
+proxmox_api_token  = "terraform@pve!platform=REEMPLAZAR"
+proxmox_insecure   = true
+proxmox_ssh_user   = "root"
+ssh_public_key     = "ssh-ed25519 AAAA... usuario@equipo"
+
+hosts = {
+  node01 = {
+    vm_id          = 201
+    node_name      = "pve"
+    template_vm_id = 9000
+    cores          = 2
+    memory_mb      = 4096
+    disk_gb        = 32
+    datastore_id   = "local-lvm"
+    bridge         = "vmbr0"
+    ip_address     = "10.10.10.11/24"
+    gateway        = "10.10.10.1"
+    dns_servers    = ["1.1.1.1", "8.8.8.8"]
+    tags           = ["platform", "k3s"]
+  }
+
+  node02 = {
+    vm_id          = 202
+    node_name      = "pve"
+    template_vm_id = 9000
+    cores          = 2
+    memory_mb      = 4096
+    disk_gb        = 32
+    datastore_id   = "local-lvm"
+    bridge         = "vmbr0"
+    ip_address     = "10.10.10.12/24"
+    gateway        = "10.10.10.1"
+    dns_servers    = ["1.1.1.1", "8.8.8.8"]
+    tags           = ["platform", "k3s"]
+  }
+
+  node03 = {
+    vm_id          = 203
+    node_name      = "pve"
+    template_vm_id = 9000
+    cores          = 2
+    memory_mb      = 4096
+    disk_gb        = 32
+    datastore_id   = "local-lvm"
+    bridge         = "vmbr0"
+    ip_address     = "10.10.10.13/24"
+    gateway        = "10.10.10.1"
+    dns_servers    = ["1.1.1.1", "8.8.8.8"]
+    tags           = ["platform", "k3s"]
+  }
+}
